@@ -1,28 +1,11 @@
-Implementation of paper ***DeepTag: A General Framework for Fiducial Marker Design and Detection***.
-
-**Project page**: https://herohuyongtao.github.io/research/publications/deep-tag/.
-
-
 ## Overview
 DeepTag is a general framework for fiducial marker design and detection, which supports existing and newly-designed marker families. DeepTag is a two-stage marker detection pipeline:
 
+This script recognise and extract the ids of rune tags
+Test live or on videos
+
 * Stage-1: detect ROIs of potential markers;
 * Stage-2: detect keypoints and digital symbols inside each ROI, then determine 6-DoF pose and marker ID.
-
-![pipeline](pipeline.png)
-
-
-## How to run
-- For image input:
-  ```
-  python test_deeptag.py --config config_image.json
-  ```
-- For video input:
-  ```
-  python test_deeptag.py --config config_video.json
-  ```
-
-The configuration file is in JSON format. Please modify the configurations to fit your needs. Example configurations files for image and video input are provided (i.e., [config_image.json](config_image.json) and [config_video.json](config_video.json)).
 
 Detail explaination of configuration file:
 * `is_video`: `{0, 1}` for image/video respectively.
